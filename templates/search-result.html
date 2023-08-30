@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block contact %}
 <!doctype html>
 <html lang="en">
@@ -49,6 +48,21 @@
                 <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=Sweater"><span class="fa fa-chevron-right mr-2"></span> Sweater</a></li>
                 </ul>
                 </li>
+                 <li>
+                <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Mobiles</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu5">
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=iphone+mobile"><span class="fa fa-chevron-right mr-2"></span> iphone</a></li>
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=samsung+mobile"><span class="fa fa-chevron-right mr-2"></span> samsung</a></li>
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=huawei+mobile"><span class="fa fa-chevron-right mr-2"></span> huawei</a></li>
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=vivo+mobile"><span class="fa fa-chevron-right mr-2"></span> vivo</a></li>
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=realme+mobile"><span class="fa fa-chevron-right mr-2"></span> realme</a></li>
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=nokia+mobile"><span class="fa fa-chevron-right mr-2"></span> nokia</a></li>
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=xiaomi+mobile"><span class="fa fa-chevron-right mr-2"></span> xiaomi</a></li>
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=oppo+mobile"><span class="fa fa-chevron-right mr-2"></span> oppo</a></li>
+                <li><a href="search?csrfmiddlewaretoken=kBuYuI76D6wcHnJokIPWellqjv7FIq7ljFbi12INKqkq3MOSqgWe59wR24gmra7E&query=lenovo+mobile"><span class="fa fa-chevron-right mr-2"></span> lenovo</a></li>
+                </ul>
+                </li>
+
                 </ul>
                 <div class="mb-5">
                 <h5>Tag Cloud</h5>
@@ -121,7 +135,7 @@
                   {% comment %} </div> {% endcomment %}
                   <div class="row icon-boxes">    
                     {% if ebay2_data %}
-                    {% for title, price, link , image in ebay2_data.data|slice:":4" %}
+                    {% for title, price, link , image in ebay2_data.data|slice:":8" %}
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0 my-4" data-aos="zoom-in" data-aos-delay="200">
                       <a href="{{ link }}">
                       <div class="icon-box">
@@ -145,7 +159,7 @@
                   <div class="row icon-boxes">    
                     {% if flipkart_data %}
                     <h2 class="text-center">Flipkart Products</h2>
-                      {% for title, price, reviews, link , image in flipkart_data.data|slice:":4" %}
+                      {% for title, price, reviews, link , image in flipkart_data.data|slice:":8" %}
                       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0 my-4" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box">
                           <a href="{{ link }}">
@@ -171,7 +185,7 @@
                   {% comment %} displaying the flipkart data if above data not found{% endcomment %}
                   <div class="row icon-boxes">    
                     {% if flipkart2_data %}
-                     {% for title, price, reviews, link , image in flipkart2_data.data|slice:":4" %}
+                     {% for title, price, reviews, link , image in flipkart2_data.data|slice:":8" %}
                       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0 my-4" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box">
                           <a href="{{ link }}">
@@ -195,7 +209,7 @@
                   </div>
                   <div class="row icon-boxes">    
                     {% if flipkart3_data %}
-                     {% for title, price, link , image in flipkart3_data.data|slice:":4" %}
+                     {% for title, price, link , image in flipkart3_data.data|slice:":8" %}
                       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0 my-4" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box">
                           <a href="{{ link }}">

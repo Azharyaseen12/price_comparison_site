@@ -13,10 +13,9 @@ def search(request):
     if request.method == 'GET':
         query = request.GET.get('query')
         if query != None:
-            #  ebay data
+      #  ebay data
             ebaywebpage = requests.get(
                 f'https://www.ebay.com/sch/i.html?_from=R40&_trksid=p1380057.m570.l1313&_nkw={query}')
-
             sp = BeautifulSoup(ebaywebpage.content, 'html.parser')
             ebaytitle = sp.find_all('div', 's-item__title')
             ebaysellprice = sp.find_all('span', 's-item__price')
